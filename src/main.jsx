@@ -13,6 +13,8 @@ import Brand from './components/Brand';
 import SpecificBrand from './components/SpecificBrand';
 import UpdateProduct from './pages/UpdateProduct';
 import DetailsProduct from './pages/DetailsProduct';
+import Login from './Auth/pages/login';
+import SignUp from './Auth/pages/SignUp';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
       {
          path:'/brand',
          element:<Brand/>
+      },
+      {
+         path:'/login',
+         element:<Login/>
+      },
+      {
+         path:'/signup',
+         element:<SignUp/>
       },
       {
          path:'/brands/:name',
