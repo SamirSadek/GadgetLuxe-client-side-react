@@ -27,7 +27,7 @@ const SpecificBrand = () => {
     return (
         <div>
             <Navbar/>
-            <h2 className="text-center my-10">Best <span className="text-red-600">{name.toUpperCase()}</span> Products</h2>
+            <h2 className="text-center my-16 text-4xl font-bold border-e-2">Trending <span className="text-orange-700 border-t-2 border-b-2 border-red-600 p-4 rounded-lg">{name.toUpperCase()}</span> Products</h2>
 
              <div className="grid grid-cols-1 md:grid-cols-3 w-3/4 mx-auto gap-10">
                 {

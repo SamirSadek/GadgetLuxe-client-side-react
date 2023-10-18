@@ -1,20 +1,6 @@
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const navLinks = (
-    <div className="flex gap-5">
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-
-      <li>
-        <NavLink to="/addProduct">Add Product</NavLink>
-      </li>
-      <li>
-        <NavLink to="/myCart">Cart</NavLink>
-      </li>
-    </div>
-  );
   return (
     <div>
       <div className="flex justify-between p-2 bg-[#020101] text-white  border-solid border-b-2 border-white">
@@ -50,14 +36,32 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                {navLinks}
+                <li>
+                  <NavLink to="/">Home</NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/addProduct">Add Product</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/myCart">Cart</NavLink>
+                </li>
               </ul>
             </div>
             <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
-              {navLinks}
+              <li>
+                <NavLink to="/">Home</NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/addProduct">Add Product</NavLink>
+              </li>
+              <li>
+                <NavLink to="/myCart">Cart</NavLink>
+              </li>
             </ul>
           </div>
           <div className="navbar-end">

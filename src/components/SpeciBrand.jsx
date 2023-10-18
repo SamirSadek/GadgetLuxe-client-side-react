@@ -1,7 +1,8 @@
 import { FiStar } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const SpeciBrand = ({ speciBrand }) => {
-  const { name, image, brandName, type, price, rating, shortDescription } =
+  const {_id, name, image, brandName, type, price, rating, shortDescription } =
     speciBrand;
 
   return (
@@ -22,8 +23,8 @@ const SpeciBrand = ({ speciBrand }) => {
           <p>Price: {price} Taka</p>
         </div>
         <div className="card-actions justify-end mt-4">
-          <div className="badge badge-outline">Details</div>
-          <div className="badge badge-outline">Update</div>
+        <Link to={`/detailsProduct/${_id}`}><div className="btn badge badge-outline">Details</div></Link>
+          <Link to={`/updateProduct/${_id}`}> <div className="btn badge badge-outline">Update</div></Link>
         </div>
       </div>
     </div>
