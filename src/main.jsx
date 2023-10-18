@@ -9,6 +9,8 @@ import Root from './components/Root';
 import Home from './pages/Home';
 import AddProduct from './pages/AddProduct';
 import MyCart from './pages/MyCart';
+import Brand from './components/Brand';
+import SpecificBrand from './components/SpecificBrand';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,8 @@ const router = createBrowserRouter([
     children:[
       {
          path:'/',
-         element:<Home></Home>
+         element:<Home></Home>,
+         loader: ()=> fetch('http://localhost:5000/brands')
       },
       {
          path:'/addProduct',
@@ -27,6 +30,15 @@ const router = createBrowserRouter([
       {
          path:'/myCart',
          element:<MyCart/>
+      },
+      {
+         path:'/brand',
+         element:<Brand/>
+      },
+      {
+         path:'/brands/:name',
+         element:<SpecificBrand/>,
+         loader: ({params})=> fetch(`http://localhost:5000/brands/${params.name}`)
       },
     ]
   },
