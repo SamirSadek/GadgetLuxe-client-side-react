@@ -1,18 +1,55 @@
 
+import { useState } from "react";
 import { FiStar } from "react-icons/fi";
-const CartCard = ({ cartProduct }) => {
+import Swal from "sweetalert2";
+const CartCard = ({ cartProduct,cartProducts,updateCartProducts }) => {
   const {_id, name, image, brandName, type, price, rating, shortDescription } =
     cartProduct;
   console.log(cartProduct);
+  const handleDelete = _id =>{
+    console.log(_id)
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            fetch(`http://localhost:5000/addCart/${_id}`,{
+                method: "DELETE"
+            })
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data)
+                if(data.deletedCount > 0){
+                    Swal.fire(
+                        'Deleted!',
+                        'Your Cart has been deleted.',
+                        'success'
+                      )
+                      const remaining = cartProducts.filter(cartProduct => cartProduct._id !== _id)
+                      updateCartProducts(remaining)
+
+                }
+            })
+        
+         
+        }
+      })
+  }
 
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card  bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
           <img
             src={image}
             alt="image"
-            className="rounded-xl"
+            className="rounded-xl h-52"
           />
         </figure>
         <div className="card-body items-center text-center">
