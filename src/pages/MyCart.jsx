@@ -1,12 +1,26 @@
+import { useLoaderData } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import CartCard from "../components/CartCard";
+import { useContext } from "react";
+import { AuthContext } from "../Auth/provider/AuthProvider";
 
 const MyCart = () => {
+  const carts = useLoaderData()
+  console.log(carts)
+  const {user} = useContext(AuthContext)
+  const Email =user.email
+   const cartProducts = carts.filter(cart => cart.userEmail == Email)
   return (
     <div>
       <Navbar />
 
-      <h2 className="text-center mt-10 text-4xl">My Cart</h2>
+      <h2 className="text-center my-10 text-4xl font-bold">My Cart</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-2/3 mx-auto gap-5">
+        {
+          cartProducts.map(cartProduct => <CartCard key={cartProduct._id} cartProduct={cartProduct}></CartCard>)
+        }
+      </div>
       <Footer />
     </div>
   );
