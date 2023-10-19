@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
          path:'/brands/:name',
-         element:<PrivateRoute><SpecificBrand/></PrivateRoute>,
+         element:<SpecificBrand/>,
          loader: ({params})=> fetch(`http://localhost:5000/brands/${params.name}`)
       },
       {

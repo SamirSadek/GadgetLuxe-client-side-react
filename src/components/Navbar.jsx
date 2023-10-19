@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Auth/provider/AuthProvider";
+import { ImAddressBook,ImPhone } from "react-icons/im";
+
 
 const Navbar = () => {
   const{user,logOut} = useContext(AuthContext)
@@ -10,10 +12,12 @@ const Navbar = () => {
   return (
     <div>
       <div className="flex justify-between p-2 bg-[#020101] text-white  border-solid border-b-2 border-white">
-        <div>
+        <div className="flex justify-center items-center gap-2">
+          <ImAddressBook/>
           <h2>123 Main Street, New York, NY 10001</h2>
         </div>
-        <div>
+        <div className="flex justify-center items-center gap-2">
+        <ImPhone/>
           <h2>123-456-78900</h2>
         </div>
       </div>
@@ -54,7 +58,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+            <img className="h-16 w-40" src="https://i.ibb.co/fFjbRh9/kog2.png" alt="" />
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">

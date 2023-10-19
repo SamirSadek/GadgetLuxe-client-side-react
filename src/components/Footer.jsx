@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="footer mt-2 p-10 bg-[#020101] text-white">
+    <footer className="footer mt-2 p-10 bg-base-200 text-black">
       <nav>
         <header className="footer-title">Services</header>
         <a className="link link-hover">Branding</a>
@@ -52,6 +52,7 @@ const Footer = () => {
             </svg>
           </a>
         </div>
+        <img className="w-36 h-16 ml-[-24px]" src="https://i.ibb.co/fFjbRh9/kog2.png" alt="" />
       </nav>
     </footer>
   );
