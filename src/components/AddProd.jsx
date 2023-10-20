@@ -1,6 +1,9 @@
+import { useRef } from "react";
 import Swal from "sweetalert2";
 const AddProd = () => {
+  const formRef = useRef();
   const handleAddProduct = (event) => {
+    
     event.preventDefault();
 
     const form = event.target;
@@ -40,20 +43,17 @@ const AddProd = () => {
             text: "Successfully Added a new Product",
             icon: "success",
             confirmButtonText: "Cool",
+            
           });
+          formRef.current.reset();
         }
       });
   };
   return (
     <div className="bg-[#F4F3F0] p-20">
-      <h2 className="text-4xl font-bold text-center">Add A Product</h2>
-      <p className="px-20 mt-10">
-        It is a long established fact that a reader will be distraceted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using Content here.
-      </p>
-      <form onSubmit={handleAddProduct}>
+      <h2 className="text-4xl font-bold text-center">Add Product</h2>
+    
+      <form ref={formRef} onSubmit={handleAddProduct}>
         <div className="md:flex gap-10 justify-center mt-10">
           <div className="form-control w-full ">
             <label className="label">
@@ -149,7 +149,7 @@ const AddProd = () => {
 
         <div className="mt-8 w-full  text-center ">
           <input
-            className="w-1/4 btn btn-ghost bg-[#D2B48C]"
+            className="md:w-1/4 btn btn-ghost bg-[#D2B48C]"
             type="submit"
             value="Add Product"
           />

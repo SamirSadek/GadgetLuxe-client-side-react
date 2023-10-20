@@ -5,10 +5,10 @@ import { TfiPrinter } from "react-icons/tfi";
 const Trending = () => {
   return (
     <div>
-      <h2 className="text-center mt-10 mb-2 text-4xl font-bold">
+      <h2 className="text-center mt-10 mb-2 text-4xl font-bold dark:text-white">
         Top Trending Category
       </h2>
-      <p className="text-center">
+      <p className="text-center dark:text-white">
         Get Your Desired Products from Featured Category!
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-10">

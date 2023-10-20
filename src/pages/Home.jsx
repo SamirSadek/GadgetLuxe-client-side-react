@@ -8,7 +8,7 @@ import Trending from "../components/Trending";
 
 const Home = () => {
     return (
-        <div>
+        <div className="dark:bg-black ">
             <Navbar/>
             <Banner/>
             <Brands/>

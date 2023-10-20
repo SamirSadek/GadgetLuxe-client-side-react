@@ -1,17 +1,33 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Auth/provider/AuthProvider";
 import { ImAddressBook,ImPhone } from "react-icons/im";
+import { BsSunFill } from 'react-icons/bs';
+
 
 
 const Navbar = () => {
+  const [theme, setTheme] = useState("light")
+  useEffect(()=>{
+    if(theme === "dark"){
+      document.documentElement.classList.add("dark")
+    }else{
+      document.documentElement.classList.remove("dark")
+
+    }
+  },[theme])
+  const handleThemeSwitch= ()=>{
+    setTheme(theme ==="dark" ? "light":"dark")
+
+  }
+
   const{user,logOut} = useContext(AuthContext)
   const handleLogOut = () => {
     logOut().then().catch();
   };
   return (
-    <div>
-      <div className="flex justify-between p-2 bg-[#020101] text-white  border-solid border-b-2 border-white">
+    <div className="">
+      <div className="flex justify-between p-2 bg-[#020101]  text-white  border-solid border-b-2 border-white">
         <div className="flex justify-center items-center gap-2">
           <ImAddressBook/>
           <h2>123 Main Street, New York, NY 10001</h2>
@@ -100,8 +116,8 @@ const Navbar = () => {
               Login
             </Link>
           )}     
-          <button className="btn bg-black rounded-full hover:text-black text-white" >
-              Dark
+          <button onClick={handleThemeSwitch} className="btn bg-black rounded-full dark:text-black dark:bg-white hover:text-black text-white" >
+              <BsSunFill/>
             </button>
          </div>
         </div>

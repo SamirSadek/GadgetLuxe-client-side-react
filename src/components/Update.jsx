@@ -53,8 +53,8 @@ const Update = () => {
     <div>
       <div>
         <div className="bg-[#F4F3F0] p-20">
-          <h2 className="text-center text-4xl my-5 font-bold">
-            Update Your Product: <span className="text-orange-700 border-t-2 border-b-2 border-red-600 p-4 rounded-lg">{name}</span>
+          <h2 className="text-center text-2xl md:text-4xl my-5 font-bold">
+            Update Your Product: <span className="text-orange-700 lg:border-t-2 lg:border-b-2 border-red-600 p-4 rounded-lg">{name}</span>
           </h2>
 
           <form onSubmit={handleUpdateProduct}>
@@ -154,7 +154,7 @@ const Update = () => {
 
             <div className="mt-8 w-full  text-center ">
               <input
-                className="w-1/4 btn btn-ghost bg-[#D2B48C]"
+                className="md:w-1/4 btn btn-ghost bg-[#D2B48C]"
                 type="submit"
                 value="Update Product"
               />

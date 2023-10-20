@@ -1,6 +1,6 @@
 const Offer = () => {
   return (
-    <div>
+    <div className="dark:text-white">
       <h2 className="text-center mt-10 mb-2 text-4xl font-bold">
         Grave The Discount
       </h2>

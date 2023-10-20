@@ -33,15 +33,15 @@ const Detail = () => {
   }
   return (
     <div>
-      <h2 className="text-center text-4xl my-16 font-bold">
+      <h2 className="text-center text-2xl md:text-4xl my-16 font-bold">
         Product Detail of
-        <span className="text-orange-700 border-t-2 border-b-2 border-red-600 p-4 rounded-lg">
+        <span className="text-orange-700 md:border-t-2 md:border-b-2 border-red-600 p-4 rounded-lg">
           {name}
         </span>
       </h2>
       <div>
-        <div className="w-3/4 h-96 mx-auto card card-side bg-base-100 shadow-xl my-10">
-          <figure className="h-full w-96 px-5">
+        <div className="w-3/4  mx-auto card  bg-base-100 shadow-xl my-10">
+          <figure className="h-full w-full px-5 mx-auto">
             <img
               src={image}
               
