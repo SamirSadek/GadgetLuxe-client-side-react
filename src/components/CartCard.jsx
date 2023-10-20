@@ -19,7 +19,7 @@ const CartCard = ({ cartProduct,cartProducts,updateCartProducts }) => {
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.isConfirmed) {
-            fetch(`http://localhost:5000/addCart/${_id}`,{
+            fetch(`https://gadgetluxe-server-side-az44g0nnb-samir-sadeks-projects.vercel.app/addCart/${_id}`,{
                 method: "DELETE"
             })
             .then(res => res.json())

@@ -11,7 +11,7 @@ const Detail = () => {
   const handleAddToCart = () =>{
    
      const addCart = {name, image, brandName, type, price, rating, shortDescription ,userEmail} 
-     fetch("http://localhost:5000/addCart", {
+     fetch("https://gadgetluxe-server-side-az44g0nnb-samir-sadeks-projects.vercel.app/addCart", {
       method: "POST",
       headers: {
         "content-type": "application/json",

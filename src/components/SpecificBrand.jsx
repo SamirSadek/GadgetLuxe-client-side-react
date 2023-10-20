@@ -12,7 +12,7 @@ const SpecificBrand = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://gadgetluxe-server-side-az44g0nnb-samir-sadeks-projects.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

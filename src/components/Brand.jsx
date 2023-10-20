@@ -13,7 +13,7 @@ const Brand = () => {
       image,
     };
     console.log(newBrand);
-    fetch("http://localhost:5000/brands", {
+    fetch("https://gadgetluxe-server-side-az44g0nnb-samir-sadeks-projects.vercel.app/brands", {
         method: "POST",
         headers: {
           "content-type": "application/json",

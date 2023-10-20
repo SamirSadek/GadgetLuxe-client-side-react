@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
          path:'/',
          element:<Home></Home>,
-         loader: ()=> fetch('http://localhost:5000/brands')
+         loader: ()=> fetch('https://gadgetluxe-server-side-az44g0nnb-samir-sadeks-projects.vercel.app/brands')
       },
       {
          path:'/addProduct',
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       {
          path:'/myCart',
          element:<PrivateRoute><MyCart/></PrivateRoute>,
-         loader: ()=> fetch('http://localhost:5000/addCart')
+         loader: ()=> fetch('https://gadgetluxe-server-side-az44g0nnb-samir-sadeks-projects.vercel.app/addCart')
       },
       {
          path:'/brand',
@@ -55,17 +55,17 @@ const router = createBrowserRouter([
       {
          path:'/brands/:name',
          element:<SpecificBrand/>,
-         loader: ({params})=> fetch(`http://localhost:5000/brands/${params.name}`)
+         loader: ({params})=> fetch(`https://gadgetluxe-server-side-az44g0nnb-samir-sadeks-projects.vercel.app/brands/${params.name}`)
       },
       {
          path:'/updateProduct/:id',
          element:<PrivateRoute><UpdateProduct/></PrivateRoute>,
-         loader: ({params})=> fetch(`http://localhost:5000/products/${params.id}`)
+         loader: ({params})=> fetch(`https://gadgetluxe-server-side-az44g0nnb-samir-sadeks-projects.vercel.app/products/${params.id}`)
       },
       {
          path:'/detailsProduct/:id',
          element:<PrivateRoute><DetailsProduct/></PrivateRoute>,
-         loader: ({params})=> fetch(`http://localhost:5000/products/${params.id}`)
+         loader: ({params})=> fetch(`https://gadgetluxe-server-side-az44g0nnb-samir-sadeks-projects.vercel.app/products/${params.id}`)
       },
     ]
   },

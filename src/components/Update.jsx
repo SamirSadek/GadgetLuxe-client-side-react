@@ -29,7 +29,7 @@ const Update = () => {
     console.log(newProduct);
 
     // send data to server
-    fetch(`http://localhost:5000/products/${_id}`, {
+    fetch(`https://gadgetluxe-server-side-az44g0nnb-samir-sadeks-projects.vercel.app/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
