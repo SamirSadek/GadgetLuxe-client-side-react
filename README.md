@@ -6,6 +6,13 @@
 Welcome to Gadget Luxe! This web application is designed for exploring and shopping for technology and electronics products from renowned brands. It provides a user-friendly interface with features like product categories, user authentication, a shopping cart, and more.
 
 🌐 Live Site: https://gadget-luxe-auth.web.app/
+
+## Used Technology
+<div align="center">
+    <img src="https://skillicons.dev/icons?i=react,html,css,vscode,github,tailwind,git" /><br>
+    <img src="https://skillicons.dev/icons?i=nodejs,javascript,express,firebase,mongodb,jwt" /><br>
+</div>
+
 ## Features and Functionalities
 
 * **Website Categories:** The website exclusively focuses on the "Technology and Electronics" category.It provides access to products from well-known brands in this category.
